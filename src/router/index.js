@@ -5,7 +5,8 @@ import login from '@/view/login/index'
 import manage from '@/view/home/index'
 import user from '@/view/user/index'
 import addgoods from '@/view/addgoods/index'
-import orderlist from '@/view/order_list/index'          
+import orderlist from '@/view/order_list/index'    
+import managelist from '@/view/manage_list/index'      
 
 Vue.use(Router)
 
@@ -39,6 +40,10 @@ export const constantRoutes = [
             {
                 path: '/orderlist',
                 component: orderlist
+            },
+            {
+                path:'/managelist',
+                component:managelist
             }
             
         ]
