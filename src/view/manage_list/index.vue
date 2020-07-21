@@ -13,28 +13,27 @@
     export default{
         data(){
             return{
+                status:1,
                 tableData:[{
-                    user_name:'user_name',
-                    create_time:'create_time',
-                    city:'city',
-                    admin:'admin'
+                    user_name:'12332111114',
+                    create_time:'2020-07-21 18:10',
+                    city:'北京',
+                    admin:'管理员'
                 }],
-                list:{
                     limit:20,
                     offset:0
-                }
             };
+        },
+        methods:{
+            getList(){
+                managerlist(this.offset,this.limit).then(res=>{
+                    this.tableData=res.data.data
+                    console.log(res)
+                })
+            }
         },
         mounted(){
             this.getList();
         },
-        methods:{
-            getList(){
-                managerlist(this.list).then(res=>{
-                    this.tableData=res.data
-                    console.log(res)
-                })
-            }
-        }
     }
 </script>
