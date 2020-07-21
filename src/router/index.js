@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import layout from '@/layout/index'
-import login from '@/view/login/index'
+import login from '@/components/login'
 import manage from '@/view/home/index'
 import user from '@/view/user/index'
 
