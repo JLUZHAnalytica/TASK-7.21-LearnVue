@@ -1,8 +1,8 @@
 <template>
   <el-table :data="tableData" stripe style="width: 100%">
-    <el-table-column prop="date" label="订单ID" width="300"></el-table-column>
-    <el-table-column prop="name" label="总价格" width="300"></el-table-column>
-    <el-table-column prop="address" label="订单状态"></el-table-column>
+    <el-table-column prop="id" label="订单ID" width="300"></el-table-column>
+    <el-table-column prop="total_amount" label="总价格" width="300"></el-table-column>
+    <el-table-column prop="title" label="订单状态"></el-table-column>
   </el-table>
 </template>
 
@@ -12,7 +12,9 @@
     export default {
       data() {
         return {
-          tableData: [],
+          tableData: [
+
+          ],
           limit:20,
           offset:1,
           count:0,
