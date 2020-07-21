@@ -25,7 +25,7 @@
 </div>
 </template>
 <script>
-  import {shopApi} from "@/api/index"
+  import {shopApi} from "@/api/shop_list"
     export default {
         data() {
         return {

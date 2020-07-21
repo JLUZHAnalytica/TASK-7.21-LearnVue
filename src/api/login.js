@@ -12,3 +12,4 @@ export function shopApi(latitude,longitude){
         method:"get",
     })
 }
+
