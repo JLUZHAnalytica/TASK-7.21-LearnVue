@@ -4,8 +4,7 @@ import layout from '@/layout/index'
 import login from '@/view/login/index'
 import manage from '@/view/home/index'
 import user from '@/view/user/index'
-import addgoods from '@/view/addgoods/index'
-
+import { food_list } from '@/view/food_list'
 
 Vue.use(Router)
 
@@ -33,9 +32,9 @@ export const constantRoutes = [
                 component: user
             },
             {
-                path: '/addgoods',
-                component: addgoods
-            }
+                path: '/food_list',
+                component: food_list
+            },
         ]
         // hidden: true
     }
