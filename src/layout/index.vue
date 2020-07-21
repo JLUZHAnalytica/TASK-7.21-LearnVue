@@ -1,55 +1,43 @@
 <template>
   <div>
-    <el-container style="height: 100%; border: 1px solid #eee">
-      <el-aside width="250px" style="background-color: rgb(238, 241, 246)">
-        <el-menu
-          :default-openeds="['1', '3']"
-          default-active="2"
-          class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
-          background-color="#545c64"
-          text-color="#fff"
-          active-text-color="#ffd04b"
-        >
+    <el-container style="height: 500px; border: 1px solid #eee">
+      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+        <el-menu :default-openeds="['1', '3']">
           <el-submenu index="1">
             <template slot="title">
-              <i class="el-icon-s-custom"></i>数据管理
+              <i class="el-icon-message"></i>导航一
             </template>
             <el-menu-item-group>
-              <!-- <template slot="title">分组一</template> -->
+              <template slot="title">分组一</template>
               <el-menu-item index="1-1">
                 <router-link to="/user">用户列表</router-link>
               </el-menu-item>
-              <el-menu-item index="1-2">
-                <router-link to="/merchantlist">商家列表</router-link>
-              </el-menu-item>
+              <el-menu-item index="1-2">选项2</el-menu-item>
             </el-menu-item-group>
-            <!-- <el-menu-item-group title="分组2"> -->
-              <el-menu-item index="1-3">
-                <router-link to="/foodlist">食品列表</router-link>
-              </el-menu-item>
-            <!-- </el-menu-item-group> -->
-            <el-menu-item index="1-4">
-              <router-link to="/orderlist">订单列表</router-link>
-            </el-menu-item>
-            <el-menu-item index="1-5">
-              <router-link to="/managerlist">管理员列表</router-link>
-            </el-menu-item>
+            <el-menu-item-group title="分组2">
+              <el-menu-item index="1-3">选项3</el-menu-item>
+            </el-menu-item-group>
+            <el-submenu index="1-4">
+              <template slot="title">选项4</template>
+              <el-menu-item index="1-4-1">选项4-1</el-menu-item>
+            </el-submenu>
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
-              <i class="el-icon-circle-plus-outline"></i>添加数据
+              <i class="el-icon-menu"></i>导航二
             </template>
             <el-menu-item-group>
-              <!-- <template slot="title">分组一</template> -->
-              <el-menu-item index="2-1">
-                <router-link to="/addshop">添加商铺</router-link>
-                </el-menu-item>
-              <el-menu-item index="2-2">
-                <router-link to="/addgoods">添加商品</router-link>
-                </el-menu-item>
+              <template slot="title">分组一</template>
+              <el-menu-item index="2-1">选项1</el-menu-item>
+              <el-menu-item index="2-2">选项2</el-menu-item>
             </el-menu-item-group>
+            <el-menu-item-group title="分组2">
+              <el-menu-item index="2-3">选项3</el-menu-item>
+            </el-menu-item-group>
+            <el-submenu index="2-4">
+              <template slot="title">选项4</template>
+              <el-menu-item index="2-4-1">选项4-1</el-menu-item>
+            </el-submenu>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
@@ -81,6 +69,7 @@
               <el-dropdown-item>删除</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
+          <span>王小虎</span>
         </el-header>
 
         <el-main>
@@ -95,13 +84,5 @@
 export default {};
 </script>
 
-<style scoped>
-.el-submenu .el-menu-item .is-active a,
-.el-menu-item.is-active a {
-  color: #20a0ff!important;
-}
-.el-menu-item a {
-  color: #fff;
-  text-decoration: none;
-}
+<style>
 </style>
