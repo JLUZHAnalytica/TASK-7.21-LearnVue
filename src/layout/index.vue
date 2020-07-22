@@ -1,9 +1,9 @@
 <template>
   <div>
     <el-container style="height: 100%; border: 1px solid #eee">
-      <el-aside width="250px" style="background-color: rgb(238, 241, 246)">
+      <el-aside width="260px" style="background-color: rgb(84,92,100)">
         <el-menu
-          :default-openeds="['1', '2']"
+          :default-openeds="['1', '3']"
           default-active="2"
           class="el-menu-vertical-demo"
           @open="handleOpen"
@@ -12,13 +12,9 @@
           text-color="#fff"
           active-text-color="#ffd04b"
         >
-          <el-menu-item index="0">
-            <i class="el-icon-menu"></i>
-            <router-link to="/manage">首页</router-link>
-          </el-menu-item>
           <el-submenu index="1">
             <template slot="title">
-              <i class="el-icon-document"></i>数据管理
+              <i class="el-icon-s-custom"></i>数据管理
             </template>
             <el-menu-item-group>
               <!-- <template slot="title">分组一</template> -->
@@ -108,10 +104,10 @@ export default {};
   color: #fff;
   text-decoration: none;
 }
-.el-aside ul{
-  text-align: left;
-}
 html,body{
-  width: 100%;
+  height: 100%;
+}
+.el-aside{
+  height: 800px;
 }
 </style>
