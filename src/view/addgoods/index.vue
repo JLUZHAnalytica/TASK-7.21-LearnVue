@@ -1,16 +1,9 @@
 <template>
   <div>
-    <SelectRes v-bind:restaurant_id="restaurant_id" />
-    <SelectFood v-bind:kind="kind" v-bind:kind_desc="kind_desc" />
-    <AddFood
-      v-bind:name="name"
-      v-bind:imageUrl="imageUrl"
-      v-bind:description="description"
-      v-bind:price="price"
-      v-bind:packing_fee="packing_fee"
-    />
+    <SelectRes :form="form" />
+    <SelectFood :form="form" />
+    <AddFood :form="form" />
     <el-button type="primary" @click="onSubmit">立即创建</el-button>
-    <el-button>取消</el-button>
   </div>
 </template>
 
@@ -19,14 +12,13 @@ import SelectRes from "./SelectRes";
 import SelectFood from "./SelectFood";
 import AddFood from "./AddFood";
 export default {
-  name: "AddGoods",
   data() {
     return {
       form: {
         kind: "",
         kind_desc: "",
         name: "",
-        restaurant_id: "",
+        restaurant_id: 11111,
         imageUrl: "",
         activity: "",
         description: "",
@@ -37,7 +29,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log("submit!");
+      this.$message.error("您的操作权限不足");
     }
   },
   components: {

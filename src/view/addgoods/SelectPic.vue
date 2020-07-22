@@ -6,7 +6,7 @@
     :on-success="handleAvatarSuccess"
     :before-upload="beforeAvatarUpload"
   >
-    <img v-if="imageUrl" :src="imageUrl" class="avatar" />
+    <img v-if="form.imageUrl" :src="form.imageUrl" class="avatar" />
     <i v-else class="el-icon-plus avatar-uploader-icon"></i>
   </el-upload>
 </template>
@@ -42,10 +42,10 @@ export default {
     return {};
   },
   name: "SelectPic",
-  props: ["imageUrl"],
+  props: ["form"],
   methods: {
     handleAvatarSuccess(res, file) {
-      this.imageUrl = URL.createObjectURL(file.raw);
+      this.form.imageUrl = URL.createObjectURL(file.raw);
     },
     beforeAvatarUpload(file) {
       const isJPG = file.type === "image/jpeg";
