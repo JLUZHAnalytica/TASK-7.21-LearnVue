@@ -36,7 +36,7 @@ export const constantRoutes = [
                 component: user
             },
             {
-                path: '/food_list',
+                path: '/foodlist',
                 component: food_list
             },
             {
