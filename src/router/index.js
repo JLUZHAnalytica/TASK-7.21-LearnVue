@@ -4,7 +4,7 @@ import layout from '@/layout/index'
 import login from '@/view/login/index'
 import manage from '@/view/home/index'
 import user from '@/view/user/index'
-import { food_list } from '@/view/food_list'
+import  food_list  from '@/view/food_list'
 
 Vue.use(Router)
 

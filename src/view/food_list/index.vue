@@ -1,9 +1,9 @@
 <template>
   <div>
     <el-table :data="tableData" border style="width: 100%">
-      <el-table-column prop="name" label="食品名称" width="320"></el-table-column>
-      <el-table-column prop="description" label="食品介绍" width="350"></el-table-column>
-      <el-table-column prop="city" label="食品评分" width="330"></el-table-column>
+      <el-table-column prop="name" label="食品名称" width="420"></el-table-column>
+      <el-table-column prop="description" label="食品介绍" width="450"></el-table-column>
+      <el-table-column prop="rating" label="食品评分" width="430"></el-table-column>
       <el-table-column fixed="right" label="操作" width="150">
         <template slot-scope="scope">
           <el-button @click.native.prevent="deleteRow(scope.$index, tableData)" type="text" size="small">移除</el-button>
@@ -22,6 +22,7 @@ export default {
       tableData:[{
           name:'name',
           description:'description',
+          rating:'rating',
         }],
       offset:0,
       limit:20,
@@ -39,7 +40,8 @@ mounted () {
     },
     foodList(){
         food_list(this.offset,this.limit,this.restaurant_id).then(res=>{
-            this.tableData=res.food_list  
+            this.tableData=res.data
+            console.log(res)   
                 })
     }
   }  
