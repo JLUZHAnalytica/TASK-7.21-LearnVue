@@ -7,7 +7,8 @@ import user from '@/view/user/index'
 import  food_list  from '@/view/food_list'
 import addgoods from '@/view/addgoods/index'
 import orderlist from '@/view/order_list/index'    
-import managerlist from '@/view/manage_list/index'      
+import managerlist from '@/view/manage_list/index'     
+import addfood_shop from '@/view/shop_list/dialog_addfood' 
 
 
 Vue.use(Router)
@@ -50,6 +51,10 @@ export const constantRoutes = [
             {
                 path:'/managerlist',
                 component:managerlist
+            },
+            {
+                path:'addfood_shop',
+                component:addfood_shop
             }
             
         ]
