@@ -2,7 +2,7 @@
   <el-container>
     <el-header>添加食品</el-header>
     <el-main>
-      <el-form ref="form2" :model="form" label-width="100px">
+      <el-form label-width="100px">
         <el-form-item label="食品名称">
           <el-input v-model="name"></el-input>
         </el-form-item>
@@ -43,7 +43,6 @@
 <script>
 import SelectPic from "./SelectPic";
 export default {
-  name: "AddFood",
   data() {
     return {
       options: [

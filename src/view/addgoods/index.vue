@@ -1,7 +1,11 @@
 <template>
   <div>
     <SelectRes v-bind:restaurant_id="restaurant_id" />
-    <SelectFood v-bind:kind="kind" v-bind:kind_desc="kind_desc" />
+    <SelectFood
+      v-bind:kind="kind"
+      v-bind:kind_desc="kind_desc"
+      v-bind:restaurant_id="restaurant_id"
+    />
     <AddFood
       v-bind:name="name"
       v-bind:imageUrl="imageUrl"
@@ -19,25 +23,22 @@ import SelectRes from "./SelectRes";
 import SelectFood from "./SelectFood";
 import AddFood from "./AddFood";
 export default {
-  name: "AddGoods",
   data() {
     return {
-      form: {
-        kind: "",
-        kind_desc: "",
-        name: "",
-        restaurant_id: "",
-        imageUrl: "",
-        activity: "",
-        description: "",
-        price: 0,
-        packing_fee: 0
-      }
+      kind: "",
+      kind_desc: "",
+      name: "",
+      restaurant_id: 11111,
+      imageUrl: "",
+      activity: "",
+      description: "",
+      price: 0,
+      packing_fee: 0
     };
   },
   methods: {
     onSubmit() {
-      console.log("submit!");
+      console.log("test!");
     }
   },
   components: {
