@@ -4,7 +4,7 @@
     <el-main>
       <el-form :model="form" label-width="80px">
         <el-form-item label="食品种类">
-          <el-select title="食品种类" v-model="kind" placeholder="请选择">
+          <el-select title="食品种类" v-model="form.kind" placeholder="请选择">
             <el-option
               v-for="item in options"
               :key="item.value"
@@ -16,10 +16,10 @@
         <el-collapse v-model="activeNames">
           <el-collapse-item title="添加食品种类" name="1">
             <el-form-item label="食品种类">
-              <el-input v-model="kind"></el-input>
+              <el-input v-model="form.kind"></el-input>
             </el-form-item>
             <el-form-item label="种类描述">
-              <el-input v-model="kind_desc"></el-input>
+              <el-input v-model="form.kind_desc"></el-input>
             </el-form-item>
             <el-button type="primary" @click="onSubmit">提交</el-button>
           </el-collapse-item>
@@ -32,7 +32,7 @@
 <script>
 import { addcategory } from "@/api/addgoods";
 export default {
-  props: ["kind", "kind_desc", "restaurant_id"],
+  props: ["form"],
   data() {
     return {
       activeNames: ["0"],
@@ -62,13 +62,17 @@ export default {
   },
   methods: {
     onSubmit() {
-      addcategory(this.kind, this.kind_desc, this.restaurant_id).then(res => {
+      addcategory(
+        this.form.kind,
+        this.form.kind_desc,
+        this.form.restaurant_id
+      ).then(res => {
         console.log(res.data.success);
         // if (res.data.status == 1) {
         //   this.$router.push("/");
         // }
       });
-      console.log("submit!");
+      this.$message.error("您的操作权限不足");
     }
   }
 };

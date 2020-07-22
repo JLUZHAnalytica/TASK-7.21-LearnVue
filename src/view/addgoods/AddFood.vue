@@ -4,19 +4,19 @@
     <el-main>
       <el-form label-width="100px">
         <el-form-item label="食品名称">
-          <el-input v-model="name"></el-input>
+          <el-input v-model="form.name"></el-input>
         </el-form-item>
         <el-form-item label="食品活动">
-          <el-input v-model="activity"></el-input>
+          <el-input v-model="form.activity"></el-input>
         </el-form-item>
         <el-form-item label="食品详情">
-          <el-input v-model="description"></el-input>
+          <el-input v-model="form.description"></el-input>
         </el-form-item>
         <el-form-item label="添加食品图片">
-          <SelectPic v-bind:imageUrl="imageUrl" />
+          <SelectPic v-bind:form="form" />
         </el-form-item>
         <el-form-item label="食品特点">
-          <el-select v-model="value" placeholder="请选择">
+          <el-select v-model="form.value" placeholder="请选择">
             <el-option
               v-for="item in options"
               :key="item.value"
@@ -26,14 +26,14 @@
           </el-select>
         </el-form-item>
         <el-form-item label="食品规格">
-          <el-radio v-model="specs" label="1">单规格</el-radio>
-          <el-radio v-model="specs" label="2">多规格</el-radio>
+          <el-radio v-model="form.specs" label="1">单规格</el-radio>
+          <el-radio v-model="form.specs" label="2">多规格</el-radio>
         </el-form-item>
         <el-form-item label="包装费">
-          <el-input-number v-model="packing_fee" :min="0" :max="1000"></el-input-number>
+          <el-input-number v-model="form.packing_fee" :min="0" :max="1000"></el-input-number>
         </el-form-item>
         <el-form-item label="价格">
-          <el-input-number v-model="price" :min="0" :max="100000"></el-input-number>
+          <el-input-number v-model="form.price" :min="0" :max="100000"></el-input-number>
         </el-form-item>
       </el-form>
     </el-main>
@@ -70,15 +70,7 @@ export default {
       value: ""
     };
   },
-  props: [
-    "name",
-    "activity",
-    "description",
-    "imageUrl",
-    "specs",
-    "packing_fee",
-    "price"
-  ],
+  props: ["form"],
   components: { SelectPic }
 };
 </script>

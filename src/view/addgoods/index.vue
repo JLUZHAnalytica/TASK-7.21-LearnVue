@@ -1,14 +1,8 @@
 <template>
   <div>
-    <SelectRes :restaurant_id="restaurant_id" />
-    <SelectFood :kind="kind" :kind_desc="kind_desc" :restaurant_id="restaurant_id" />
-    <AddFood
-      :name="name"
-      :imageUrl="imageUrl"
-      :description="description"
-      :price="price"
-      :packing_fee="packing_fee"
-    />
+    <SelectRes :form="form" />
+    <SelectFood :form="form" />
+    <AddFood :form="form" />
     <el-button type="primary" @click="onSubmit">立即创建</el-button>
   </div>
 </template>
@@ -20,15 +14,17 @@ import AddFood from "./AddFood";
 export default {
   data() {
     return {
-      kind: "",
-      kind_desc: "",
-      name: "",
-      restaurant_id: 11111,
-      imageUrl: "",
-      activity: "",
-      description: "",
-      price: 0,
-      packing_fee: 0
+      form: {
+        kind: "",
+        kind_desc: "",
+        name: "",
+        restaurant_id: 11111,
+        imageUrl: "",
+        activity: "",
+        description: "",
+        price: 0,
+        packing_fee: 0
+      }
     };
   },
   methods: {
