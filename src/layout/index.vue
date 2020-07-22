@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-container style="height: 100%; border: 1px solid #eee">
-      <el-aside width="250px" style="background-color: rgb(238, 241, 246)">
+      <el-aside width="260px" style="background-color: rgb(84,92,100)">
         <el-menu
           :default-openeds="['1', '3']"
           default-active="2"
@@ -103,5 +103,11 @@ export default {};
 .el-menu-item a {
   color: #fff;
   text-decoration: none;
+}
+html,body{
+  height: 100%;
+}
+.el-aside{
+  height: 800px;
 }
 </style>
