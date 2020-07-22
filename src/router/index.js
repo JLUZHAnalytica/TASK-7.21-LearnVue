@@ -9,6 +9,7 @@ import addgoods from '@/view/addgoods/index'
 import orderlist from '@/view/order_list/index'    
 import managerlist from '@/view/manage_list/index'     
 import addfood_shop from '@/view/shop_list/dialog_addfood' 
+import shop_list from '@/view/shop_list/index' 
 
 
 Vue.use(Router)
@@ -31,6 +32,10 @@ export const constantRoutes = [
             {
                 path: '/manage',
                 component: manage
+            },
+            {
+                path: '/shop_list',
+                component: shop_list
             },
             {
                 path: '/user',
