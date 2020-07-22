@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="intro">
     <el-table :data="tableData" border style="width: 100%">
       <el-table-column prop="name" label="食品名称" width="420"></el-table-column>
       <el-table-column prop="description" label="食品介绍" width="450"></el-table-column>
@@ -7,12 +7,12 @@
       <el-table-column fixed="right" label="操作" width="150">
         <template slot-scope="scope">
           <el-button @click.native.prevent="deleteRow(scope.$index, tableData)" type="text" size="small">移除</el-button>
-          <el-button type="text" size="small">编辑</el-button>
+          <el-button type="text" @click="dialogFormVisible = true">编辑</el-button>
         </template>
       </el-table-column>
     </el-table>
     <Todo />
-        <el-button type="text" @click="dialogFormVisible = true">编辑</el-button>
+        
 
         <el-dialog title="修改食品信息" :visible.sync="dialogFormVisible">
         <el-form :model="form">
@@ -117,11 +117,11 @@
 
 <script>
 import {food_list} from '@/api/food_list' 
-import Todo from './components/Todo'
+// import Todo from './components/Todo'
 export default {
   name:'intro',
     components:{
-      Todo
+      // Todo
     },
   data() {
     return {
