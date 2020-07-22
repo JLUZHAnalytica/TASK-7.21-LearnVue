@@ -22,7 +22,7 @@
                 <router-link to="/user">用户列表</router-link>
               </el-menu-item>
               <el-menu-item index="1-2">
-                <router-link to="/merchantlist">商家列表</router-link>
+                <router-link to="/shop_list">商家列表</router-link>
               </el-menu-item>
             </el-menu-item-group>
             <!-- <el-menu-item-group title="分组2"> -->
