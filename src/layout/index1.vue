@@ -108,6 +108,6 @@ html,body{
   height: 100%;
 }
 .el-aside{
-  height: 1300px;
+  height: 800px;
 }
 </style>
