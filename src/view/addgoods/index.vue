@@ -1,20 +1,15 @@
 <template>
   <div>
-    <SelectRes v-bind:restaurant_id="restaurant_id" />
-    <SelectFood
-      v-bind:kind="kind"
-      v-bind:kind_desc="kind_desc"
-      v-bind:restaurant_id="restaurant_id"
-    />
+    <SelectRes :restaurant_id="restaurant_id" />
+    <SelectFood :kind="kind" :kind_desc="kind_desc" :restaurant_id="restaurant_id" />
     <AddFood
-      v-bind:name="name"
-      v-bind:imageUrl="imageUrl"
-      v-bind:description="description"
-      v-bind:price="price"
-      v-bind:packing_fee="packing_fee"
+      :name="name"
+      :imageUrl="imageUrl"
+      :description="description"
+      :price="price"
+      :packing_fee="packing_fee"
     />
     <el-button type="primary" @click="onSubmit">立即创建</el-button>
-    <el-button>取消</el-button>
   </div>
 </template>
 
@@ -38,7 +33,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log("test!");
+      this.$message.error("您的操作权限不足");
     }
   },
   components: {

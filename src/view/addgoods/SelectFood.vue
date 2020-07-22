@@ -35,6 +35,7 @@ export default {
   props: ["kind", "kind_desc", "restaurant_id"],
   data() {
     return {
+      activeNames: ["0"],
       options: [
         {
           value: "选项1",
