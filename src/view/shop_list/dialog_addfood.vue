@@ -5,7 +5,7 @@
 <el-dialog title="添加食品" :visible.sync="dialogFormVisible">
   <el-form :model="form">
     <el-form-item label="食品名称" :label-width="formLabelWidth">
-      <el-input v-model="form.name" autocomplete="off"></el-input>
+      <el-input v-model="form.foodname" autocomplete="off"></el-input>
     </el-form-item>
     <el-form-item label="食品活动" :label-width="formLabelWidth">
       <el-input v-model="form.activities" autocomplete="off"></el-input>
@@ -26,7 +26,7 @@
         </el-dialog>
     </el-form-item>
     <el-form-item label="食品特点" :label-width="formLabelWidth">
-      <el-select v-model="form.region" placeholder="请选择" style="">
+      <el-select v-model="form.regionbox" placeholder="请选择" style="">
         <el-option label="区域一" value="shanghai"></el-option>
         <el-option label="区域二" value="beijing"></el-option>
       </el-select>
@@ -55,16 +55,16 @@
             dialogVisible: false,
             dialogFormVisible: false,
             form: {
-            name: '',
+            foodname: '',
             activities:'',
             details:'',
-            region: '',
-            date1: '',
-            date2: '',
-            delivery: false,
-            type: [],
-            resource: '',
-            desc: ''
+            regionbox: '',
+            afdate1: '',
+            afdate2: '',
+            afdelivery: false,
+            aftype: [],
+            afresource: '',
+            afdesc: ''
         },
         formLabelWidth: '120px'
       };
