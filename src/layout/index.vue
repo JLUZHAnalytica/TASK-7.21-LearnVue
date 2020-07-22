@@ -30,9 +30,9 @@
               </el-menu-item>
             </el-menu-item-group>
             <!-- <el-menu-item-group title="分组2"> -->
-              <el-menu-item index="1-3">
-                <router-link to="/foodlist">食品列表</router-link>
-              </el-menu-item>
+            <el-menu-item index="1-3">
+              <router-link to="/foodlist">食品列表</router-link>
+            </el-menu-item>
             <!-- </el-menu-item-group> -->
             <el-menu-item index="1-4">
               <router-link to="/orderlist">订单列表</router-link>
@@ -49,10 +49,10 @@
               <!-- <template slot="title">分组一</template> -->
               <el-menu-item index="2-1">
                 <router-link to="/addshop">添加商铺</router-link>
-                </el-menu-item>
+              </el-menu-item>
               <el-menu-item index="2-2">
                 <router-link to="/addgoods">添加商品</router-link>
-                </el-menu-item>
+              </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3">
@@ -76,7 +76,7 @@
       </el-aside>
 
       <el-container>
-        <el-header style="text-align: right; font-size: 12px">
+        <!-- <el-header style="text-align: right; font-size: 12px">
           <el-dropdown>
             <i class="el-icon-setting" style="margin-right: 15px"></i>
             <el-dropdown-menu slot="dropdown">
@@ -85,7 +85,7 @@
               <el-dropdown-item>删除</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-        </el-header>
+        </el-header>-->
 
         <el-main>
           <router-view />
@@ -102,16 +102,17 @@ export default {};
 <style scoped>
 .el-submenu .el-menu-item .is-active a,
 .el-menu-item.is-active a {
-  color: #20a0ff!important;
+  color: #20a0ff !important;
 }
 .el-menu-item a {
   color: #fff;
   text-decoration: none;
 }
-.el-aside ul{
+.el-aside ul {
   text-align: left;
 }
-html,body{
+html,
+body {
   width: 100%;
 }
 </style>
